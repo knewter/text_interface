@@ -1,2 +1,0 @@
-class TextInterface
-end

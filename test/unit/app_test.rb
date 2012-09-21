@@ -1,8 +1,10 @@
 require_relative '../test_helper'
-require_relative '../../lib/text_interface'
+require_relative '../../lib/app'
 
-describe TextInterface do
-  it 'can run a test' do
-    true.must_equal true
+describe App do
+  subject { App.new }
+
+  it 'prints a line' do
+    subject.print_line(10).must_equal '-' * 10
   end
 end
