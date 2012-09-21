@@ -21,4 +21,12 @@ describe Canvas do
     canvas = Canvas.new(1, 1, lambda{ cell })
     canvas.line_at(0).must_equal [cell]
   end
+
+  it 'can set a given cell value' do
+    cell = mock()
+    canvas = Canvas.new(1, 1, lambda{ cell })
+    new_cell = mock()
+    canvas.set_cell_at(0, 0, new_cell)
+    canvas.cell_at(0, 0).must_equal new_cell
+  end
 end

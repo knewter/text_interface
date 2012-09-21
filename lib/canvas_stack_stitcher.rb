@@ -1,0 +1,2 @@
+class CanvasStackStitcher
+end

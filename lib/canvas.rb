@@ -13,10 +13,14 @@ class Canvas
   end
 
   def cell_at(x, y)
-    line_at(x)[y]
+    line_at(y)[x]
   end
 
-  def line_at(x)
-    lines[x]
+  def line_at(y)
+    lines[y]
+  end
+
+  def set_cell_at(x, y, val)
+    line_at(y)[x] = val
   end
 end
