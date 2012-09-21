@@ -1,0 +1,3 @@
+# Text Interface
+
+Just spiking a fun little tdd text interface to play with some tests...
