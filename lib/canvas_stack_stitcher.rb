@@ -9,7 +9,7 @@ class CanvasStackStitcher
 
   def reset_canvas
     layer = @stack.layers.first
-    @canvas = layer.canvas.dup if layer
+    @canvas = layer.canvas.clone if layer
   end
 
   def execute!

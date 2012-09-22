@@ -23,4 +23,9 @@ class Canvas
   def set_cell_at(x, y, val)
     line_at(y)[x] = val
   end
+
+  def clone
+    # quickie deep clone
+    Marshal.load(Marshal.dump(self))
+  end
 end

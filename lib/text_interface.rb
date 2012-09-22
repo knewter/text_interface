@@ -1,0 +1,7 @@
+require_relative './canvas'
+require_relative './canvas_stitcher'
+require_relative './canvas_printer'
+require_relative './canvas_stack'
+require_relative './canvas_layer'
+require_relative './canvas_stack_stitcher'
+require_relative './canvas_creator'
