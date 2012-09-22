@@ -6,4 +6,5 @@ gem 'mocha'
 
 group :test do
   gem 'pry'
+  gem 'flog'
 end

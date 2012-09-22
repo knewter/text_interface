@@ -1,6 +1,12 @@
 # Text Interface
+Text animation tool in ruby.
 
-Just spiking a fun little tdd text interface to play with some tests...
+## Development
+To run the tests, clone the repo.  Then:
+
+    gem install bundler
+    bundle
+    rake test
 
 ## Examples
 
