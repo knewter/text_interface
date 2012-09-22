@@ -3,8 +3,11 @@ class CanvasCreator
     @lines = []
     text.each_line do |text_line|
       line = []
-      stripped_text_line = text_line[0..-2] # Remove the newline at the end of the line
-      stripped_text_line.each_char do |c|
+      if text_line[-1] == "\n"
+        text_line = text_line[0..-2] # Remove the newline at the end of the line
+      end
+
+      text_line.each_char do |c|
         line << c
       end
       @lines << line
