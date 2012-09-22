@@ -21,4 +21,18 @@ describe CanvasPrinter do
     printer = CanvasPrinter.new(canvas)
     printer.print.must_equal "abcdefg\n1234567"
   end
+
+  it 'prints out a three line canvas' do
+    canvas = mock()
+    canvas.stubs(:lines).returns([%w(a), %w(b), %w(c)])
+    printer = CanvasPrinter.new(canvas)
+    printer.print.must_equal "a\nb\nc"
+  end
+
+  it 'prints out a four line canvas' do
+    canvas = mock()
+    canvas.stubs(:lines).returns([%w(a), %w(b), %w(c), %w(d)])
+    printer = CanvasPrinter.new(canvas)
+    printer.print.must_equal "a\nb\nc\nd"
+  end
 end

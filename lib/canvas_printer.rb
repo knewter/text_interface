@@ -6,11 +6,6 @@ class CanvasPrinter
   end
 
   def print
-    ''.tap do |output|
-      @canvas.lines.each do |line|
-        output << line.join('')
-        output << "\n" unless @canvas.lines.last == line
-      end
-    end
+    @canvas.lines.map{ |line| line.join('') }.join("\n")
   end
 end

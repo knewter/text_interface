@@ -18,5 +18,6 @@ class CanvasCreator
         @canvas.set_cell_at(x, y, cell)
       end
     end
+    @canvas
   end
 end

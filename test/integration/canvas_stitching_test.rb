@@ -8,7 +8,7 @@ describe "canvas stitching and printing" do
     input_canvas = Canvas.new(1, 1, lambda{ ' ' })
     output_canvas = Canvas.new(10, 3, lambda{ 'a' })
     stitcher = CanvasStitcher.new(input_canvas, output_canvas, 2, 2)
-    stitcher.execute
+    stitcher.execute!
 
     printer = CanvasPrinter.new(output_canvas)
     printer.print.must_equal "aaaaaaaaaa\naaaaaaaaaa\naa aaaaaaa"

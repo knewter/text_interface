@@ -10,7 +10,7 @@ describe CanvasStitcher do
     output_canvas.expects(:set_cell_at).with(0, 1, cell)
 
     stitcher = CanvasStitcher.new(input_canvas, output_canvas, 0, 1)
-    stitcher.execute
+    stitcher.execute!
   end
 
   it 'stitches a one-line two-char input canvas into a one-line output canvas at the right point' do
@@ -23,6 +23,6 @@ describe CanvasStitcher do
     output_canvas.expects(:set_cell_at).with(2, 0, cell2)
 
     stitcher = CanvasStitcher.new(input_canvas, output_canvas, 1, 0)
-    stitcher.execute
+    stitcher.execute!
   end
 end
